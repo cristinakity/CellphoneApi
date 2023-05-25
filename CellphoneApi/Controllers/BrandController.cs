@@ -65,7 +65,7 @@ namespace CellphoneApi.Controllers
             parameters.Add("Name", brand.Name, DbType.String);      
             connection.Open();
             await connection.ExecuteAsync(query, parameters);
-            return Ok();
+            return StatusCode(201);
         }
 
         [HttpPut]
